@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.spaapp.R
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment.view.*
+import kotlinx.android.synthetic.main.doggo_fragment.view.*
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -21,8 +21,8 @@ class DoggoFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        val view = inflater?.inflate(R.layout.fragment, container, false)
+        // Inflate the layout for this doggo_fragment
+        val view = inflater?.inflate(R.layout.doggo_fragment, container, false)
         return view
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,8 +43,8 @@ class DoggoFragment : Fragment() {
 
         SpaService.getRandomDog(
             { adog ->
-                Picasso.get().load(adog.url).into(view.SpaImage)
-                view.SpaName.text = adog.id
+                Picasso.get().load(adog.url).into(view.DoggoImage)
+                view.DoggoName.text = adog.id
             }, { error -> TODO() }
         )
     }
