@@ -42,9 +42,9 @@ class DoggoFragment : Fragment() {
         val SpaService = SpaService(retrofitService)
 
         SpaService.getRandomDog(
-            { cocktail ->
-                Picasso.get().load(cocktail.strSearchThumb).into(view.SpaImage)
-                view.SpaName.text = cocktail.strSearch
+            { adog ->
+                Picasso.get().load(adog.url).into(view.SpaImage)
+                view.SpaName.text = adog.id
             }, { error -> TODO() }
         )
     }

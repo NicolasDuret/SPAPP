@@ -1,10 +1,9 @@
 package com.example.spaapp.spa
 
 
-data class Doggo(,
+data class Doggo(
     val id: String,
-                 val url: String,
-                 val width: Int,
-                 val height: Int
-
+    val url: String,
+    val width: Int,
+    val height: Int
 )
