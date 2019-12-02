@@ -43,8 +43,8 @@ class SpaFragment : Fragment() {
 
         cocktailService.getRandomSpa(
             { cocktail ->
-                Picasso.get().load(cocktail.strSearchThumb).into(view.spaImage)
-                view.spaName.text = cocktail.strSearch
+                Picasso.get().load(cocktail.strSearchThumb).into(view.SpaImage)
+                view.SpaName.text = cocktail.strSearch
             }, { error -> TODO() }
         )
     }
