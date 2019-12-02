@@ -35,7 +35,7 @@ class SpaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val retrofit = Retrofit
             .Builder()
-            .baseUrl("https://thedogapi.com")
+            .baseUrl("https://api.thedogapi.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val retrofitService = retrofit.create(SpaWebService::class.java)
