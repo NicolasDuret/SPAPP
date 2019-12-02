@@ -45,7 +45,9 @@ class DoggoFragment : Fragment() {
             { adog ->
                 Picasso.get().load(adog.url).into(view.DoggoImage)
                 view.DoggoName.text = adog.id
-            }, { error -> TODO() }
+            }, { error ->
+                throw error
+            }
         )
     }
 

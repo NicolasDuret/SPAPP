@@ -32,9 +32,16 @@ tools:context=".MainActivity">
     </com.google.android.material.appbar.AppBarLayout>-->
 
     <ScrollView
-        android:id="@+id/listbox"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/listbox"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:flexWrap="wrap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </ScrollView>
 
