@@ -5,6 +5,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.example.spaapp.spa.DoggoFragment
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,6 +14,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val cards = 10
+        for (cardIndex in 1..cards) {
+            val dogFragment = DoggoFragment()
+            supportFragmentManager.beginTransaction().add(
+                listbox.id, dogFragment
+            ).commit()
+        }
 
     }
 
