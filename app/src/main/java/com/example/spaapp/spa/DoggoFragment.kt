@@ -1,4 +1,4 @@
-package com.example.spaapp.Spa
+package com.example.spaapp.spa
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,9 +12,9 @@ import kotlinx.android.synthetic.main.fragment.view.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class SpaFragment : Fragment() {
+class DoggoFragment : Fragment() {
     companion object {
-        fun newInstance() = SpaFragment()
+        fun newInstance() = DoggoFragment()
     }
 
     //Affiche l'interface graphique
@@ -39,9 +39,9 @@ class SpaFragment : Fragment() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val retrofitService = retrofit.create(SpaWebService::class.java)
-        val cocktailService = SpaService(retrofitService)
+        val SpaService = SpaService(retrofitService)
 
-        cocktailService.getRandomSpa(
+        SpaService.getRandomDog(
             { cocktail ->
                 Picasso.get().load(cocktail.strSearchThumb).into(view.SpaImage)
                 view.SpaName.text = cocktail.strSearch
