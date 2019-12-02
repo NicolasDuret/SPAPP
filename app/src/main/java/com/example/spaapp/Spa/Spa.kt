@@ -5,6 +5,6 @@ data class Spa(
     val strSearch: String,
     val strSearchThumb: String,
     val strCategory: String,
-    val iSreach: Int
+    val iSearch: Int
 
 )
