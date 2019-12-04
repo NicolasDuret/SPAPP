@@ -45,29 +45,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" >
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="-16dp">
+        app:navGraph="@navigation/app_navigation" >
 
-        <com.google.android.flexbox.FlexboxLayout
-            android:id="@+id/listbox"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            app:flexWrap="wrap"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="-16dp">
 
-    </ScrollView>
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/listbox"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:flexWrap="wrap"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </ScrollView>
     </fragment>
 
-    <androidx.constraintlayout.widget.Guideline
+   <!-- <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="20dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,16 +42,16 @@ class DoggoFragment : Fragment() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val retrofitService = retrofit.create(SpaWebService::class.java)
-        val SpaService = SpaService(retrofitService)
+        val spaService = SpaService(retrofitService)
 
-        SpaService.getRandomDog(
+        spaService.getRandomDog(
             { adog ->
                 Picasso.get().load(adog.url).into(view.DoggoImage)
                 view.DoggoName.text = adog.id
 
                 view.doggoclick.setOnClickListener{
                     val bundle = bundleOf("doggo" to Gson().toJson(adog))
-                    findNavController(this).navigate(R.id.doggoDescription,bundle)
+                    findNavController(this).navigate(R.id.linkDoggo,bundle)
                 }
 
 

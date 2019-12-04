@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/doggoDescription2">
+
+    <activity
+        android:id="@+id/doggoDescription2"
+        android:name="com.example.spaapp.DoggoDescription"
+        android:label="activity_doggo_description"
+        tools:layout="@layout/activity_doggo_description" />
+    <fragment
+        android:id="@+id/doggoFragment"
+        android:name="com.example.spaapp.spa.DoggoFragment"
+        android:label="DoggoFragment" >
+        <action
+            android:id="@+id/linkDoggo"
+            app:destination="@id/doggoDescription2" />
+    </fragment>
+</navigation>
