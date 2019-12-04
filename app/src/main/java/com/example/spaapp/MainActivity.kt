@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
             ).commit()
         }
 
+     //   findViewById<Button>(R.id.done_button).setOnClickListener {
+            //appel de la fun() qui inflate la vue suivante
+      //  }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
