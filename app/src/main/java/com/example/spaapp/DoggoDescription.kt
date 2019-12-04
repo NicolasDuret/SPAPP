@@ -53,6 +53,6 @@ class DoggoDescription : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val doggoJson = arguments!!.getString("doggo")
         val doggo = Gson().toJson(doggoJson, Doggo::class.java)
-       // Picasso.get().load(coktail)
+       // Picasso.get().load()
     }
 }
