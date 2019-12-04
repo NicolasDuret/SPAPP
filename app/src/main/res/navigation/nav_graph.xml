@@ -10,14 +10,18 @@
         android:name="com.example.spaapp.MainActivity"
         android:label="activity_main"
         app:action="Click"
-        tools:layout="@layout/activity_main">
-        <action
-            android:id="@+id/action_mainActivity_to_doggoDescription"
-            app:destination="@id/doggoDescription" />
-    </activity>
+        tools:layout="@layout/activity_main"/>
     <activity
         android:id="@+id/doggoDescription"
         android:name="com.example.spaapp.DoggoDescription"
         android:label="activity_doggo_description"
         tools:layout="@layout/activity_doggo_description" />
+    <fragment
+        android:id="@+id/doggoFragment2"
+        android:name="com.example.spaapp.spa.DoggoFragment"
+        android:label="DoggoFragment" >
+        <action
+            android:id="@+id/action_doggoFragment2_to_doggoDescription2"
+            app:destination="@id/doggoDescription" />
+    </fragment>
 </navigation>
