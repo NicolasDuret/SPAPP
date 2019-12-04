@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.example.spaapp.R
+import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.doggo_fragment.view.*
 
@@ -45,10 +48,19 @@ class DoggoFragment : Fragment() {
             { adog ->
                 Picasso.get().load(adog.url).into(view.DoggoImage)
                 view.DoggoName.text = adog.id
+
+                view.doggoclick.setOnClickListener{
+                    val bundle = bundleOf("doggo" to Gson().toJson(adog))
+                    findNavController(this).navigate(R.id.doggoDescription,bundle)
+                }
+
+
             }, { error ->
                 throw error
             }
         )
+
+
     }
 
 }

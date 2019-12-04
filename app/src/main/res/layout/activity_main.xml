@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -37,6 +39,13 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" >
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,6 +61,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </ScrollView>
+    </fragment>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
