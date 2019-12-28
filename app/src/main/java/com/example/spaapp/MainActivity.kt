@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
         //tests
 
-        boutonChanger = findViewById(R.id.button2)
+       boutonChanger = findViewById(R.id.button2)
         val monIntent : Intent =  Intent(this,DoggoDescription::class.java)
 
         boutonChanger.setOnClickListener {
