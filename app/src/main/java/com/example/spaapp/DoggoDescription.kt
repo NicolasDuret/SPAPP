@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import com.example.spaapp.spa.Doggo
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_doggo_description.*
+
 
 
 /**
@@ -55,4 +57,10 @@ class DoggoDescription : Fragment() {
         val doggo = Gson().toJson(doggoJson, Doggo::class.java)
        // Picasso.get().load()
     }
-}
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //setContentView(R.layout.fragment_doggo_description)
+    }
+
+    }

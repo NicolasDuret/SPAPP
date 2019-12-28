@@ -1,15 +1,19 @@
 package com.example.spaapp
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import com.example.spaapp.spa.DoggoFragment
 
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var boutonChanger : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,8 +26,18 @@ class MainActivity : AppCompatActivity() {
                 listbox.id, dogFragment
             ).commit()
         }
+        //tests
 
-     //   findViewById<Button>(R.id.done_button).setOnClickListener {
+        boutonChanger = findViewById(R.id.button2)
+        val monIntent : Intent =  Intent(this,DoggoDescription::class.java)
+
+        boutonChanger.setOnClickListener {
+            startActivity(monIntent)
+        }
+
+
+
+        //   findViewById<Button>(R.id.done_button).setOnClickListener {
             //appel de la fun() qui inflate la vue suivante
       //  }
 
@@ -44,4 +58,6 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
 }

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".DoggoDescription">
 
+
     <TextView
         android:id="@+id/activity_doggo_description"
         android:layout_width="match_parent"
@@ -19,7 +20,6 @@
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold" />
-
 
     <Button
         android:id="@+id/button"
