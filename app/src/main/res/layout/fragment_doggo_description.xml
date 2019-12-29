@@ -1,32 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DoggoDescription">
+    tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/activity_doggo_description"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="5dp"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:text="Un chien faisant malheureusement de la spa"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="77dp"
-        android:layout_height="68dp"
-        android:text="Retour"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="122dp" />
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E3B433"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
-</FrameLayout>
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="83dp"
+                android:layout_height="43dp"
+                app:srcCompat="@mipmap/mc_launcher" />
+
+
+            <TextView
+                android:id="@+id/nomApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SpApp"
+                app:layout_anchorGravity="center" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/DoggoImage"
+                android:layout_width="match_parent"
+                android:layout_height="232dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/DoggoName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DoggoName"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- <androidx.constraintlayout.widget.Guideline
+         android:id="@+id/guideline"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         app:layout_constraintGuide_begin="20dp" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

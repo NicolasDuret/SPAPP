@@ -6,15 +6,14 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import com.example.spaapp.spa.DoggoFragment
 
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
-    lateinit var boutonChanger : Button
-
+    @Override
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,21 +27,16 @@ class MainActivity : AppCompatActivity() {
         }
         //tests
 
-       boutonChanger = findViewById(R.id.button2)
-        val monIntent : Intent =  Intent(this,DoggoDescription::class.java)
-
-        boutonChanger.setOnClickListener {
-            startActivity(monIntent)
-        }
-
-
 
         //   findViewById<Button>(R.id.done_button).setOnClickListener {
-            //appel de la fun() qui inflate la vue suivante
-      //  }
+        //appel de la fun() qui inflate la vue suivante
+        //  }
 
     }
-
+    fun nextActivity(view : View) {
+        val intent = Intent(this, DoggoDescription::class.java)
+        startActivity(intent)
+    }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
