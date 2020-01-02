@@ -7,55 +7,71 @@
     tools:context=".MainActivity">
 
 
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E3B433"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="83dp"
-            android:layout_height="43dp"
-            app:srcCompat="@mipmap/mc_launcher" />
-
-
-        <TextView
-            android:id="@+id/nomApp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SpApp"
-            app:layout_anchorGravity="center" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/app_navigation" >
+        android:orientation="vertical">
 
-        <ScrollView
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E3B433"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="83dp"
+                android:layout_height="43dp"
+                app:srcCompat="@mipmap/mc_launcher" />
+
+
+            <TextView
+                android:id="@+id/nomApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SpApp"
+                app:layout_anchorGravity="center" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <fragment
+            android:id="@+id/fragment2"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="68dp"
-            tools:layout_editor_absoluteY="-16dp">
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/app_navigation">
 
-            <com.google.android.flexbox.FlexboxLayout
-                android:id="@+id/listbox"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                app:flexWrap="wrap"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="-16dp">
 
-        </ScrollView>
-    </fragment>
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/listbox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    app:flexWrap="wrap"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </ScrollView>
+        </fragment>
+    </LinearLayout>
+
+    <!-- <androidx.constraintlayout.widget.Guideline
+         android:id="@+id/guideline"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         app:layout_constraintGuide_begin="20dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
