@@ -31,13 +31,6 @@
             android:text="SpApp"
             app:layout_anchorGravity="center" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <fragment
@@ -64,12 +57,5 @@
 
         </ScrollView>
     </fragment>
-
-    <!-- <androidx.constraintlayout.widget.Guideline
-         android:id="@+id/guideline"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:orientation="vertical"
-         app:layout_constraintGuide_begin="20dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

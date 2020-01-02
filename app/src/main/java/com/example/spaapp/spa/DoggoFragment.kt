@@ -18,7 +18,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class DoggoFragment : Fragment() {
 
-    lateinit var Retour : Button
     companion object {
         fun newInstance() = DoggoFragment()
     }

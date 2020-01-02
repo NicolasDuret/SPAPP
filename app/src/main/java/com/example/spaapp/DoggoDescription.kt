@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.spaapp.spa.Doggo
 import com.google.gson.Gson
+import android.app.Activity
 
 /**
  * A simple [Fragment] subclass.
@@ -19,7 +20,10 @@ import com.google.gson.Gson
  */
 class DoggoDescription : AppCompatActivity() {
 
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_doggo_description)
+    }
 
     /*override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,9 +57,6 @@ class DoggoDescription : AppCompatActivity() {
        // Picasso.get().load()
     }*/
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_doggo_description)
-    }
+
 
     }

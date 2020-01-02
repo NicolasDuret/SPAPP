@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val cards = 10
+        val cards = 20
         for (cardIndex in 1..cards) {
             val dogFragment = DoggoFragment()
             supportFragmentManager.beginTransaction().add(
