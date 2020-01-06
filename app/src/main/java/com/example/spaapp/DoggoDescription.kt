@@ -50,12 +50,7 @@ class DoggoDescription : AppCompatActivity() {
 
     }
 
-    /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val doggoJson = arguments!!.getString("doggo")
-        val doggo = Gson().toJson(doggoJson, Doggo::class.java)
-       // Picasso.get().load()
-    }*/
+
 
 
 
